@@ -59,3 +59,35 @@ Explanation:
 =================================================
 
 """
+class CreditCard:
+    def __init__(self, name, card_number):
+        self.name = name
+        self.card_number = card_number
+
+    def pay(self, amount):
+        print(f"[CreditCard] \t {self.name} via card {self.card_number} paid {amount}")
+
+class UPI:
+    def __init__(self, upi_id):
+        self.upi_id = upi_id
+
+    def pay(self, amount):
+        print(f"[UPI] \t\t {self.upi_id} \t paid {amount}")
+
+class Cash:
+    def __init__(self, name):
+        self.name = name
+
+    def pay(self, amount):
+        print(f"[Cash] \t\t {self.name} \t\t paid {amount} in cash")
+
+def checkout(payment, amount):
+    payment.pay(amount)
+
+alice_card = CreditCard("Alice", "4111-1111")
+bob_upi = UPI("bob@upi")
+carol_cash = Cash("Carol")
+
+checkout(alice_card, 500)
+checkout(bob_upi, 500)
+checkout(carol_cash, 500)
