@@ -107,4 +107,3 @@ class Cow(Animal):
 animals = [ Dog("Buddy") , Cat("Whiskers") , Cow("Bessie") ]
 for a in animals:
     a.speak()
-    

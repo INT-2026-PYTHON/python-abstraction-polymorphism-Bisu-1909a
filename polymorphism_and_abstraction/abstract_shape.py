@@ -170,3 +170,4 @@ for shp in my_shapes:
     p = shp.perimeter()
     print(f"{shp.name:10} -> area={a:.2f} \t perimeter={p:.2f}")
     
+    
